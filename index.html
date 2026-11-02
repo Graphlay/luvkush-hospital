@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luv Kush Hospital Deoli</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Luv Kush Multi Speciality Hospital, Deoli (Tonk) – orthopaedics, gynaecology, paediatrics & NICU, and dental care. 24-hour emergency. Free treatment under Mukhyamantri Ayushman Arogya Yojana.">
+<!-- DEMO: remove the next line when the site goes live, so Google can index it -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0F2B46">
+<meta property="og:title" content="Luv Kush Hospital, Deoli">
+<meta property="og:description" content="Orthopaedics, gynaecology, paediatrics & NICU, dental care. 24-hour emergency in Deoli, Tonk.">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/img/logo-192.png">
+<link rel="apple-touch-icon" href="assets/img/logo-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hospital",
+  "name": "Luv Kush Multi Speciality Hospital",
+  "alternateName": "लव कुश हॉस्पिटल",
+  "logo": "assets/img/logo-512.png",
+  "telephone": "+91-8107781966",
+  "email": "luvkushhospital2020@gmail.com",
+  "address": {"@type": "PostalAddress","streetAddress": "In front of Bharatpur House, Jyoti Colony","addressLocality": "Deoli","addressRegion": "Rajasthan","postalCode": "304804","addressCountry": "IN"},
+  "openingHours": "Mo-Su 00:00-23:59",
+  "medicalSpecialty": ["Orthopedic","Obstetric","Gynecologic","Pediatric","Dentistry"],
+  "aggregateRating": {"@type": "AggregateRating","ratingValue": "4.3","reviewCount": "37"}
+}
+</script>
+<style>
+/* Layout: a hospital front desk – the building up top, a "where does it hurt" router, then people, rooms, proof, and the way in. */
+:root{
+  --paper:#F3F7F8;      /* cool clinical white */
+  --surface:#FFFFFF;
+  --ink:#0F2B46;        /* the building's deep glass blue */
+  --ink-2:#4B6175;
+  --teal:#0C7880;       /* logo teal */
+  --teal-soft:#DCEEEF;
+  --cross:#D2235F;      /* the magenta rooftop cross – emergency & key actions only */
+  --cross-soft:#FBE3EB;
+  --line:#D5E1E5;
+  --figure:#C9DDE1;
+  --band:#0F2B46; --band-ink:#EAF3F5; --band-ink-2:#A9C0CC; --ayush:#0C7880;
+  --shadow:0 18px 40px -22px rgba(15,43,70,.45);
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r-lg:26px; --r-md:16px; --r-sm:10px;
+  --wrap:1180px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#09161F; --surface:#0F2230; --ink:#E6F0F3; --ink-2:#9AB1BD;
+    --teal:#47C1C4; --teal-soft:#123840; --cross:#F2588E; --cross-soft:#3A1526;
+    --line:#203A4A; --figure:#1D3A48; --band:#0C1D2A; --band-ink:#EAF3F5; --band-ink-2:#93ACB9; --ayush:#0E5A61;
+    --shadow:0 18px 40px -22px rgba(0,0,0,.7); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#09161F; --surface:#0F2230; --ink:#E6F0F3; --ink-2:#9AB1BD;
+  --teal:#47C1C4; --teal-soft:#123840; --cross:#F2588E; --cross-soft:#3A1526;
+  --line:#203A4A; --figure:#1D3A48; --band:#0C1D2A; --band-ink:#EAF3F5; --band-ink-2:#93ACB9; --ayush:#0E5A61;
+  --shadow:0 18px 40px -22px rgba(0,0,0,.7); color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em}
+h2{font-size:clamp(2rem,4vw,3rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:700;letter-spacing:-.005em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.section{padding-block:clamp(64px,9vw,112px)}
+.lede{color:var(--ink-2);font-size:1.1rem;max-width:58ch}
+.section-head{display:grid;gap:14px;margin-bottom:40px;max-width:760px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;border:0;font:600 1rem var(--f-body);text-decoration:none;cursor:pointer;transition:transform .15s ease, background .15s ease}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:var(--teal)}
+.btn-cross{background:var(--cross);color:#fff}
+.btn-cross:hover{filter:brightness(1.08)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+
+/* Demo ribbon */
+.demo-bar{background:var(--cross);color:#fff;font-size:.9rem;text-align:center;padding-block:9px}
+.demo-bar .wrap{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;align-items:center}
+.demo-bar b{font-weight:700}
+.demo-bar a{color:#fff;font-weight:700}
+.watermark{position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='220'%3E%3Ctext x='20' y='130' transform='rotate(-22 180 110)' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23D2235F'%3EGRAPHLAY DEMO%3C/text%3E%3C/svg%3E")}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:41;background:var(--paper)}
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb, var(--paper) 86%, transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+.header.scrolled{border-bottom-color:var(--line)}
+.header .wrap{display:flex;align-items:center;gap:20px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.brand-mark{width:48px;height:48px;flex:none;border-radius:50%;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.foot-logo{width:72px;height:72px;border-radius:50%;background:#fff;margin-bottom:16px}
+.brand-name{display:grid;line-height:1.1}
+.brand-name b{font-family:var(--f-display);font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
+.brand-name span{font-size:.85rem;color:var(--ink-2)}
+.nav{display:flex;gap:4px}
+.nav a{text-decoration:none;font-weight:500;font-size:.98rem;padding:8px 12px;border-radius:999px;color:var(--ink-2)}
+.nav a:hover{color:var(--ink);background:var(--teal-soft)}
+.header .btn{min-height:44px;padding:0 18px}
+.demo-pill{display:none;font-size:.75rem;font-weight:700;color:var(--cross);background:var(--cross-soft);padding:4px 10px;border-radius:999px}
+.is-demo .demo-pill{display:inline-block}
+@media (max-width:980px){.nav{display:none}}
+@media (max-width:560px){.header .btn-book{display:none}.brand-name span{display:none}}
+
+/* Hero */
+.hero{padding-block:clamp(28px,5vw,64px) clamp(56px,7vw,96px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border-radius:999px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);font-size:.95rem;font-weight:500}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ink-2);flex:none}
+.dot.open{background:#1FA463;box-shadow:0 0 0 0 rgba(31,164,99,.5);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(31,164,99,0)}100%{box-shadow:0 0 0 0 rgba(31,164,99,0)}}
+.hero h1{font-size:clamp(2.6rem,6.2vw,5rem);font-weight:800;margin:22px 0 22px;letter-spacing:-.03em;line-height:1}
+.hero .lede{font-size:clamp(1.08rem,1.6vw,1.25rem)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 36px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+.fact b{display:block;font-family:var(--f-display);font-size:1.6rem;font-weight:700;line-height:1.1}
+.fact span{font-size:.92rem;color:var(--ink-2)}
+.hero-photo{position:relative}
+.hero-photo .frame{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;background:var(--figure);box-shadow:var(--shadow)}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.hero-cross{position:absolute;top:-18px;right:-18px;width:76px;height:76px;filter:drop-shadow(0 10px 18px rgba(210,35,95,.35))}
+.rating-card{position:absolute;left:-28px;bottom:32px;background:var(--surface);border-radius:var(--r-md);padding:16px 18px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:center;max-width:260px}
+.rating-card .score{font-family:var(--f-display);font-size:2.2rem;font-weight:800;line-height:1}
+.stars{color:#F2A900;letter-spacing:2px;font-size:.95rem}
+.rating-card small{display:block;color:var(--ink-2);font-size:.85rem;line-height:1.3}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-photo{max-width:520px}
+  .rating-card{left:16px;bottom:16px}
+  .hero-cross{right:-8px;top:-14px;width:60px;height:60px}
+}
+@media (max-width:520px){.facts{grid-template-columns:1fr 1fr}.hero-ctas .btn{flex:1 1 100%}}
+@media (prefers-reduced-motion:no-preference){
+  .hero .rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero .rise:nth-child(2){animation-delay:.08s}.hero .rise:nth-child(3){animation-delay:.16s}.hero .rise:nth-child(4){animation-delay:.24s}.hero .rise:nth-child(5){animation-delay:.32s}
+  .hero-photo .frame{animation:unclip 1.1s cubic-bezier(.2,.7,.2,1) both .1s}
+  .hero-cross{animation:pop .6s cubic-bezier(.3,1.6,.5,1) both .9s}
+  .rating-card{animation:rise .7s cubic-bezier(.2,.7,.2,1) both 1s}
+}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+@keyframes unclip{from{clip-path:inset(18% 0 0 0 round 26px)}to{clip-path:inset(0 0 0 0 round 26px)}}
+@keyframes pop{from{transform:scale(0) rotate(-45deg)}}
+
+/* Symptom router */
+.guide{background:var(--surface);border-block:1px solid var(--line)}
+.guide-grid{display:grid;grid-template-columns:minmax(260px,.8fr) 1.2fr;gap:clamp(24px,5vw,64px);align-items:start}
+.body-map{position:relative;background:var(--paper);border-radius:var(--r-lg);padding:20px 12px 8px}
+.body-map svg{width:100%;height:auto;max-height:520px;display:block;margin:0 auto}
+.figure{fill:var(--figure)}
+.spot{cursor:pointer}
+.spot .ring{fill:var(--cross);opacity:.18;transform-box:fill-box;transform-origin:center}
+.spot .core{fill:var(--cross);stroke:var(--surface);stroke-width:3}
+.spot:hover .core,.spot:focus-visible .core{fill:var(--ink)}
+.spot[aria-pressed="true"] .core{fill:var(--teal)}
+.spot[aria-pressed="true"] .ring{fill:var(--teal);opacity:.3}
+.spot:focus{outline:none}
+.spot:focus-visible .ring{opacity:.5}
+@media (prefers-reduced-motion:no-preference){.spot .ring{animation:breathe 2.4s ease-in-out infinite}}
+@keyframes breathe{50%{transform:scale(1.35);opacity:.06}}
+.map-hint{text-align:center;font-size:.9rem;color:var(--ink-2);padding:6px 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 26px}
+.chip{border:0;background:var(--paper);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line);border-radius:999px;padding:10px 16px;font:500 .98rem var(--f-body);cursor:pointer}
+.chip:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);box-shadow:none}
+.chip.urgent{color:var(--cross);box-shadow:inset 0 0 0 1.5px var(--cross)}
+.result{border-radius:var(--r-lg);background:var(--paper);padding:clamp(20px,3vw,32px);display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:start;min-height:260px}
+.result img{width:120px;height:150px;object-fit:cover;border-radius:var(--r-md);background:var(--figure)}
+.result .dept{font-size:.95rem;font-weight:600;color:var(--teal)}
+.result h3{font-size:1.6rem;margin:4px 0 2px}
+.result .quals{color:var(--ink-2);font-size:.95rem}
+.result ul{margin:14px 0 18px;padding-left:20px;display:grid;gap:4px}
+.result .row{display:flex;flex-wrap:wrap;gap:10px}
+.result .row .btn{min-height:46px;padding:0 20px;font-size:.95rem}
+.result.emergency{background:var(--cross-soft)}
+.result.emergency h3{color:var(--cross)}
+.note{font-size:.88rem;color:var(--ink-2);margin-top:16px}
+@media (max-width:860px){.guide-grid{grid-template-columns:1fr}.body-map svg{max-height:400px}}
+@media (max-width:480px){.result{grid-template-columns:1fr}.result img{width:96px;height:120px}}
+
+/* Doctors */
+.doctors{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.doc{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px var(--line)}
+.doc figure{margin:0;aspect-ratio:4/5;background:var(--figure);overflow:hidden}
+.doc figure img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.doc:hover figure img{transform:scale(1.04)}
+.doc-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.doc .dept{font-size:.9rem;font-weight:600;color:var(--teal)}
+.doc h3{font-size:1.35rem}
+.doc .quals{font-size:.92rem;color:var(--ink-2)}
+.doc .reg{font-size:.82rem;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.doc ul{margin:10px 0 16px;padding-left:18px;font-size:.95rem;display:grid;gap:2px}
+.doc .btn{margin-top:auto;min-height:46px;font-size:.95rem}
+@media (max-width:1060px){.doctors{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){
+  .doctors{grid-template-columns:1fr}
+  .doc{display:grid;grid-template-columns:38% 1fr}
+  .doc .btn{white-space:nowrap;font-size:.86rem;padding:0 14px;min-height:42px}
+  .doc h3{font-size:1.2rem}
+  .doc figure{aspect-ratio:auto;height:100%;min-height:220px}
+  .doc-body{padding:16px}
+  .doc ul{display:none}
+}
+
+/* Ortho spotlight */
+.spot-band{background:var(--band);color:var(--band-ink)}
+.spot-band .lede{color:var(--band-ink-2)}
+.spot-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:center}
+.spot-photo{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5}
+.spot-photo img{width:100%;height:100%;object-fit:cover}
+.spot-photo figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(9,22,31,.78);backdrop-filter:blur(8px);color:#fff;border-radius:var(--r-md);padding:14px 16px;font-size:.92rem;line-height:1.45}
+.spot-photo figcaption b{font-family:var(--f-display);font-size:1.15rem;display:block}
+.treat{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin:30px 0 32px;padding:0;list-style:none}
+.treat li{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);display:flex;gap:12px;align-items:baseline}
+.treat li::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--cross);flex:none;transform:translateY(-2px) rotate(45deg)}
+.free{display:inline-flex;gap:10px;align-items:center;background:rgba(255,255,255,.08);border-radius:999px;padding:10px 18px 10px 12px;font-weight:600}
+.free i{font-style:normal;background:#1FA463;color:#fff;border-radius:999px;padding:2px 10px;font-size:.85rem}
+.spot-band .btn-ghost{color:var(--band-ink);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.3)}
+@media (max-width:860px){.spot-grid{grid-template-columns:1fr}.spot-photo{max-width:420px}}
+@media (max-width:560px){.treat{grid-template-columns:1fr}}
+
+/* Facilities */
+.fac-list{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;margin-bottom:44px}
+.fac-item{display:grid;gap:6px;align-content:start}
+.fac-item svg{width:30px;height:30px;color:var(--teal)}
+.fac-item b{font-family:var(--f-display);font-size:1.12rem}
+.fac-item span{font-size:.94rem;color:var(--ink-2)}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:14px}
+.gallery figure{margin:0;position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--figure)}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery figcaption{position:absolute;left:10px;bottom:10px;background:rgba(9,22,31,.72);color:#fff;font-size:.82rem;font-weight:600;padding:5px 10px;border-radius:999px}
+.g1{grid-column:span 2;grid-row:span 3}.g2{grid-column:span 2;grid-row:span 2}.g3{grid-column:span 2;grid-row:span 2}
+.g4{grid-column:span 2;grid-row:span 2}.g5{grid-column:span 2;grid-row:span 2}.g6{grid-column:span 2;grid-row:span 2}
+.g7{grid-column:span 2;grid-row:span 1}
+@media (max-width:900px){.fac-list{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}.gallery figure{grid-column:span 1!important;grid-row:span 1!important}.gallery .g1{grid-row:span 2!important}}
+
+/* Videos */
+.vid-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.reel-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,260px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin}
+.reel{scroll-snap-align:start;display:grid;gap:12px}
+.reel-box{position:relative;aspect-ratio:9/16;border-radius:var(--r-lg);overflow:hidden;background:#0b1720;border:0;padding:0;cursor:pointer;width:100%}
+.reel-box img,.reel-box video{width:100%;height:100%;object-fit:cover}
+.reel-box .play{position:absolute;inset:auto 0 0 0;padding:60px 16px 16px;background:linear-gradient(transparent,rgba(5,14,20,.85));display:flex;align-items:center;gap:10px;color:#fff;font:600 .95rem var(--f-body);text-align:left}
+.reel-box .play span{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
+.reel-box .play svg{width:18px;height:18px;color:#0F2B46;margin-left:3px}
+.reel p{font-size:.92rem;color:var(--ink-2);line-height:1.4}
+.reel p b{color:var(--ink);display:block;font-size:1rem}
+.track-btns{display:flex;gap:8px}
+.track-btns button{width:46px;height:46px;border-radius:50%;border:0;background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--line);color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.track-btns button:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.track-btns svg{width:20px;height:20px}
+
+/* Ayushman + checklist */
+.aid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.aid-card{border-radius:var(--r-lg);padding:clamp(24px,4vw,44px)}
+.aid-ayush{background:var(--ayush);color:#fff}
+.aid-ayush h2{font-size:clamp(1.8rem,3.2vw,2.5rem)}
+.aid-ayush p{color:rgba(255,255,255,.88);margin-top:14px;max-width:52ch}
+.aid-ayush .big{font-family:var(--f-display);font-size:clamp(3.2rem,7vw,5.5rem);font-weight:800;line-height:.9;letter-spacing:-.04em;margin-bottom:18px}
+.aid-check{background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.aid-check h3{font-size:1.45rem;margin-bottom:6px}
+.checklist{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:4px}
+.checklist label{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.checklist input{width:22px;height:22px;accent-color:var(--teal);flex:none;margin:2px 0 0}
+.checklist input:checked + span{color:var(--ink-2);text-decoration:line-through}
+@media (max-width:860px){.aid{grid-template-columns:1fr}}
+
+/* Reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{margin:0;padding:28px 0 0;border-top:3px solid var(--ink);display:grid;gap:16px;align-content:start}
+.review blockquote{margin:0;font-family:var(--f-display);font-size:1.3rem;font-weight:500;line-height:1.35;letter-spacing:-.01em}
+.review figcaption{font-size:.92rem;color:var(--ink-2)}
+.review figcaption b{color:var(--ink)}
+.g-line{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:36px;color:var(--ink-2)}
+@media (max-width:860px){.reviews{grid-template-columns:1fr}}
+
+/* Booking */
+.book-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.hours{margin-top:32px;border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
+.hours-row{display:flex;justify-content:space-between;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.hours-row:last-child{border-bottom:0}
+.hours-row span{color:var(--ink-2)}
+.hours-row b{text-align:right}
+.hours-row.em b{color:var(--cross)}
+form.book{background:var(--surface);border-radius:var(--r-lg);padding:clamp(22px,3.5vw,40px);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:grid;gap:7px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-weight:600;font-size:.95rem}
+.field input,.field select,.field textarea{width:100%;min-height:52px;border-radius:var(--r-sm);border:1.5px solid var(--line);background:var(--paper);color:var(--ink);font:400 1rem var(--f-body);padding:12px 14px}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
+.field .err{color:var(--cross);font-size:.85rem;display:none}
+.field.invalid .err{display:block}
+.field.invalid input{border-color:var(--cross)}
+form.book .btn{grid-column:1/-1;min-height:56px;font-size:1.05rem}
+.form-note{grid-column:1/-1;font-size:.88rem;color:var(--ink-2);text-align:center}
+@media (max-width:860px){.book-grid{grid-template-columns:1fr}}
+@media (max-width:520px){form.book{grid-template-columns:1fr}}
+
+/* Visit / directions */
+.visit{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+.visit-photo{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:420px;background:var(--figure)}
+.visit-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.visit-photo .addr{position:absolute;left:16px;right:16px;bottom:16px;background:var(--surface);border-radius:var(--r-md);padding:20px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow)}
+.visit-photo .addr b{font-family:var(--f-display);font-size:1.2rem;display:block}
+.visit-photo .addr span{color:var(--ink-2);font-size:.95rem}
+.visit-side{display:grid;gap:20px;align-content:start}
+.panel{background:var(--surface);border-radius:var(--r-lg);padding:24px 26px;box-shadow:inset 0 0 0 1px var(--line)}
+.panel h3{margin-bottom:6px}
+.panel p{color:var(--ink-2);font-size:.95rem}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.towns a{text-decoration:none;padding:9px 14px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line);font-weight:500;font-size:.95rem}
+.towns a:hover{box-shadow:inset 0 0 0 1.5px var(--teal);color:var(--teal)}
+.contact-list{display:grid;gap:0;margin-top:8px}
+.contact-list a,.contact-list div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;font-variant-numeric:tabular-nums;flex-wrap:wrap}
+.contact-list > :last-child{border-bottom:0}
+.contact-list span{color:var(--ink-2)}
+.contact-list b{font-weight:600;word-break:break-word}
+@media (max-width:860px){.visit{grid-template-columns:1fr}.visit-photo{min-height:360px}}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font-family:var(--f-display);font-size:1.2rem;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-10px;border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(225deg);margin-top:-2px}
+.faq details p{padding:0 0 22px;color:var(--ink-2);max-width:70ch}
+
+/* Footer */
+.footer{background:var(--band);color:var(--band-ink-2);padding-block:56px 110px;font-size:.95rem}
+.footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.footer b{color:var(--band-ink);display:block;margin-bottom:10px;font-family:var(--f-display);font-size:1.05rem}
+.footer a{color:var(--band-ink-2);text-decoration:none;display:block;padding:3px 0}
+.footer a:hover{color:#fff}
+.footer .credit{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.footer .credit a{display:inline;color:var(--band-ink);font-weight:600}
+@media (max-width:760px){.footer .wrap{grid-template-columns:1fr}}
+@media (min-width:861px){.footer{padding-block:56px}}
+
+/* Mobile action bar */
+.actionbar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:none;grid-template-columns:1fr 1fr 1.2fr;gap:8px;
+  padding:10px max(12px, env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px, env(safe-area-inset-left,0px));
+  background:color-mix(in srgb, var(--surface) 92%, transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.actionbar .btn{min-height:48px;padding:0 10px;font-size:.92rem;gap:6px}
+.actionbar .btn svg{width:18px;height:18px}
+@media (max-width:860px){.actionbar{display:grid}}
+.fab-wa{position:fixed;right:max(24px, env(safe-area-inset-right,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:45;width:60px;height:60px;border-radius:50%;background:#1FA463;color:#fff;display:grid;place-items:center;border:0;cursor:pointer;box-shadow:0 12px 26px -10px rgba(31,164,99,.7)}
+.fab-wa svg{width:30px;height:30px}
+@media (max-width:860px){.fab-wa{display:none}}
+
+/* Modal */
+.modal{position:fixed;inset:0;z-index:80;background:rgba(5,14,20,.6);display:grid;place-items:center;padding:20px}
+.modal-card{background:var(--surface);color:var(--ink);border-radius:var(--r-lg);max-width:440px;width:100%;padding:30px 28px;display:grid;gap:14px;box-shadow:var(--shadow)}
+.modal-card h3{font-size:1.5rem}
+.modal-card p{color:var(--ink-2)}
+.modal-card .btn{width:100%}
+.modal-card .em{font-size:.92rem;background:var(--cross-soft);border-radius:var(--r-sm);padding:12px 14px;color:var(--ink)}
+.expired{position:fixed;inset:0;z-index:90;background:var(--band);color:var(--band-ink);display:grid;place-items:center;padding:24px;text-align:center}
+.expired .box{max-width:520px;display:grid;gap:16px;justify-items:center}
+.expired h2{font-size:clamp(1.8rem,5vw,2.6rem)}
+.expired p{color:var(--band-ink-2)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4.5" width="18" height="17" rx="3"/><path d="M8 2.5v4M16 2.5v4M3 10h18M8 14h2M14 14h2M8 17.5h2"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M6 4l14 8-14 8z"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+</svg>
+
+<div id="demoBar" class="demo-bar" hidden></div>
+
+<header class="header" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Luv Kush Hospital home">
+      <img class="brand-mark" src="assets/img/logo.webp" alt="" width="48" height="48">
+      <span class="brand-name"><b>Luv Kush Hospital</b><span>लव कुश हॉस्पिटल · Deoli</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#guide">Find a doctor</a>
+      <a href="#doctors">Specialists</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#videos">Videos</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <span class="demo-pill">Demo</span>
+    <a class="btn btn-primary btn-book" href="#book">Book appointment</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="status rise" aria-live="polite"><span class="dot" data-opd-dot></span><span data-opd-text>Checking OPD hours…</span></div>
+      <h1 class="rise">Specialist care in Deoli, day and night.</h1>
+      <p class="lede rise">Bone and joint surgery, women's health and pregnancy, newborn and child care, and dentistry under one roof. Our emergency and NICU never close.</p>
+      <div class="hero-ctas rise">
+        <a class="btn btn-primary" href="#book"><svg><use href="#i-cal"/></svg>Book appointment</a>
+        <a class="btn btn-cross" href="tel:+918107781966"><svg><use href="#i-phone"/></svg>Emergency 81077 81966</a>
+      </div>
+      <div class="facts rise">
+        <div class="fact"><b>24 hrs</b><span>Emergency &amp; NICU</span></div>
+        <div class="fact"><b>4</b><span>Specialist doctors</span></div>
+        <div class="fact"><b>Free</b><span>care under Ayushman*</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame"><img src="assets/img/building.webp" alt="Luv Kush Hospital building in Deoli with its glass front and rooftop cross" width="1400" height="1263" fetchpriority="high"></div>
+      <svg class="hero-cross" viewBox="0 0 64 64" aria-hidden="true"><path d="M23 6h18v17h17v18H41v17H23V41H6V23h17z" fill="var(--cross)"/></svg>
+      <a class="rating-card" href="https://www.google.com/maps/search/?api=1&query=Luv+kush+Hospital+Deoli+Tonk" target="_blank" rel="noopener" style="text-decoration:none">
+        <span class="score">4.3</span>
+        <span><span class="stars" aria-label="4.3 out of 5">★★★★★</span><small>37 reviews on Google from patients in Deoli</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SYMPTOM ROUTER -->
+<section class="section guide" id="guide">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Where does it hurt?</h2>
+      <p class="lede">Tap the body or pick a concern. We'll show you which of our specialists to see, and you can book in one tap.</p>
+    </div>
+    <div class="guide-grid">
+      <div class="body-map">
+        <svg viewBox="0 0 220 440" role="group" aria-label="Body map. Choose an area.">
+          <g class="figure">
+            <circle cx="110" cy="46" r="30"/>
+            <rect x="99" y="72" width="22" height="20" rx="8"/>
+            <rect x="68" y="86" width="84" height="136" rx="32"/>
+            <rect x="46" y="92" width="24" height="150" rx="12" transform="rotate(12 58 96)"/>
+            <rect x="150" y="92" width="24" height="150" rx="12" transform="rotate(-12 162 96)"/>
+            <rect x="74" y="200" width="32" height="210" rx="16"/>
+            <rect x="114" y="200" width="32" height="210" rx="16"/>
+          </g>
+          <g class="spot" data-area="teeth" tabindex="0" role="button" aria-pressed="false" aria-label="Teeth and mouth"><circle class="ring" cx="110" cy="58" r="15"/><circle class="core" cx="110" cy="58" r="8"/></g>
+          <g class="spot" data-area="shoulder" tabindex="0" role="button" aria-pressed="false" aria-label="Shoulder"><circle class="ring" cx="76" cy="100" r="15"/><circle class="core" cx="76" cy="100" r="8"/></g>
+          <g class="spot" data-area="arm" tabindex="0" role="button" aria-pressed="false" aria-label="Arm, wrist or a broken bone"><circle class="ring" cx="168" cy="200" r="15"/><circle class="core" cx="168" cy="200" r="8"/></g>
+          <g class="spot" data-area="spine" tabindex="0" role="button" aria-pressed="false" aria-label="Back and spine"><circle class="ring" cx="110" cy="138" r="15"/><circle class="core" cx="110" cy="138" r="8"/></g>
+          <g class="spot" data-area="pelvis" tabindex="0" role="button" aria-pressed="false" aria-label="Lower abdomen, periods or pregnancy"><circle class="ring" cx="110" cy="194" r="15"/><circle class="core" cx="110" cy="194" r="8"/></g>
+          <g class="spot" data-area="hip" tabindex="0" role="button" aria-pressed="false" aria-label="Hip"><circle class="ring" cx="80" cy="222" r="15"/><circle class="core" cx="80" cy="222" r="8"/></g>
+          <g class="spot" data-area="knee" tabindex="0" role="button" aria-pressed="false" aria-label="Knee"><circle class="ring" cx="130" cy="306" r="15"/><circle class="core" cx="130" cy="306" r="8"/></g>
+          <g class="spot" data-area="foot" tabindex="0" role="button" aria-pressed="false" aria-label="Ankle and foot"><circle class="ring" cx="90" cy="392" r="15"/><circle class="core" cx="90" cy="392" r="8"/></g>
+        </svg>
+        <p class="map-hint">Tap a dot</p>
+      </div>
+      <div>
+        <div class="chips" role="group" aria-label="Common concerns">
+          <button class="chip" data-area="pregnancy" aria-pressed="false">Pregnancy check-up</button>
+          <button class="chip" data-area="newborn" aria-pressed="false">Newborn needs care</button>
+          <button class="chip" data-area="child" aria-pressed="false">Child has fever or rash</button>
+          <button class="chip" data-area="sports" aria-pressed="false">Sports or ligament injury</button>
+          <button class="chip" data-area="joints" aria-pressed="false">Joint pain or arthritis</button>
+          <button class="chip urgent" data-area="emergency" aria-pressed="false">Accident or emergency</button>
+        </div>
+        <div class="result" id="result" aria-live="polite"></div>
+        <p class="note">This guide helps you choose the right specialist. It is not a diagnosis. Severe pain, heavy bleeding, breathing trouble or fainting: come to emergency straight away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="section" id="doctors">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Meet our specialists</h2>
+      <p class="lede">Four specialists under one roof, so you don't have to travel to Kota or Jaipur for specialist care.</p>
+    </div>
+    <div class="doctors">
+      <article class="doc">
+        <figure><img src="assets/img/dr-vinod.webp" alt="Dr. Vinod Kumar, orthopaedic surgeon" width="720" height="900" loading="lazy"></figure>
+        <div class="doc-body">
+          <span class="dept">Orthopaedics &amp; joint replacement</span>
+          <h3>Dr. Vinod Kumar</h3>
+          <span class="quals">MBBS, DNB (Ortho), FIJR (Mumbai), FIFA Diploma in Football Medicine</span>
+          <span class="reg">RMC-29546</span>
+          <ul><li>Knee &amp; hip replacement</li><li>Keyhole (arthroscopic) surgery</li><li>Fractures &amp; sports injuries</li></ul>
+          <a class="btn btn-primary" href="#book" data-book="ortho">Book with Dr. Vinod</a>
+        </div>
+      </article>
+      <article class="doc">
+        <figure><img src="assets/img/dr-divya.webp" alt="Dr. Divya Gupta, obstetrician and gynaecologist" width="720" height="900" loading="lazy"></figure>
+        <div class="doc-body">
+          <span class="dept">Obstetrics &amp; gynaecology</span>
+          <h3>Dr. Divya Gupta</h3>
+          <span class="quals">MBBS, MS (Obstetrics &amp; Gynaecology)</span>
+          <span class="reg">Reg. No. 16262</span>
+          <ul><li>Pregnancy care &amp; delivery</li><li>Sonography incl. colour Doppler</li><li>Women's health problems</li></ul>
+          <a class="btn btn-primary" href="#book" data-book="gynae">Book with Dr. Divya</a>
+        </div>
+      </article>
+      <article class="doc">
+        <figure><img src="assets/img/dr-harendra.webp" alt="Dr. Harendra Meena, paediatrician" width="720" height="900" loading="lazy"></figure>
+        <div class="doc-body">
+          <span class="dept">Paediatrics &amp; NICU</span>
+          <h3>Dr. Harendra Meena</h3>
+          <span class="quals">MBBS, MD (Paediatrics)</span>
+          <span class="reg">Reg. No. 32057</span>
+          <ul><li>Newborn intensive care (NICU)</li><li>Fever, infections, rashes</li><li>Child growth &amp; nutrition</li></ul>
+          <a class="btn btn-primary" href="#book" data-book="paeds">Book with Dr. Harendra</a>
+        </div>
+      </article>
+      <article class="doc">
+        <figure><img src="assets/img/dr-nutan.webp" alt="Dr. Nutan Meena, dental surgeon" width="720" height="900" loading="lazy"></figure>
+        <div class="doc-body">
+          <span class="dept">Dental care</span>
+          <h3>Dr. Nutan Meena</h3>
+          <span class="quals">BDS, Dental Surgeon</span>
+          <span class="reg">Reg. No. A-2472</span>
+          <ul><li>Root canal treatment (RCT)</li><li>Digital OPG X-ray</li><li>Cleaning, caps &amp; crooked teeth</li></ul>
+          <a class="btn btn-primary" href="#book" data-book="dental">Book with Dr. Nutan</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ORTHO SPOTLIGHT -->
+<section class="section spot-band">
+  <div class="wrap spot-grid">
+    <figure class="spot-photo">
+      <img src="assets/img/dr-vinod.webp" alt="Dr. Vinod Kumar" width="720" height="900" loading="lazy">
+      <figcaption><b>Dr. Vinod Kumar</b>Orthopaedic surgeon, trained in joint replacement in Mumbai</figcaption>
+    </figure>
+    <div>
+      <h2>Bone and joint surgery, now in Deoli</h2>
+      <p class="lede" style="margin-top:16px">From a simple fracture to a full knee replacement, treatment that used to mean a trip to the city is available here, with regular specialist OPD.</p>
+      <ul class="treat">
+        <li>Knee and hip joint replacement</li>
+        <li>Keyhole (arthroscopic) joint surgery</li>
+        <li>ACL, PCL and rotator cuff tears</li>
+        <li>Complex fractures</li>
+        <li>Ilizarov correction of bent or short bones</li>
+        <li>Bone infection and tumour treatment</li>
+        <li>Arthritis, frozen shoulder, sciatica</li>
+        <li>Clubfoot plaster for babies</li>
+      </ul>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+        <span class="free"><i>Free</i>Eligible surgeries under Ayushman yojana</span>
+        <a class="btn btn-ghost" href="#book" data-book="ortho">Book ortho OPD</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="section" id="facilities">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What's inside the building</h2>
+      <p class="lede">Tests, scans, medicines and beds in one place, so a single visit is usually enough.</p>
+    </div>
+    <div class="fac-list">
+      <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="10"/></svg><b>24-hour emergency</b><span>Doctors and staff on site day and night.</span></div>
+      <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="9" width="18" height="10" rx="3"/><path d="M7 9V6h10v3M8 14h8"/></svg><b>NICU</b><span>Warmers, phototherapy and oxygen support for newborns.</span></div>
+      <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="13" height="10" rx="2"/><path d="M16 9h3l2 3v6H5v-4"/></svg><b>Sonography</b><span>TVS, pregnancy scans and colour Doppler.</span></div>
+      <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg><b>Pathology lab</b><span>Blood and urine tests in-house.</span></div>
+      <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3c-2 0-3 2-3 4 0 4 2 6 2 10 0 2 1 4 2 4s1-3 2-5h4c1 2 1 5 2 5s2-2 2-4c0-4 2-6 2-10 0-2-1-4-3-4-2 0-3 1-5 1S9 3 7 3z"/></svg><b>Dental OPG X-ray</b><span>Full-mouth digital X-ray in the dental clinic.</span></div>
+      <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18V7M3 13h18v5M21 13a3 3 0 0 0-3-3h-7v3"/><circle cx="7" cy="10" r="2"/></svg><b>Private &amp; general wards</b><span>Clean, air-conditioned rooms.</span></div>
+      <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="8" width="16" height="13" rx="2"/><path d="M8 8V5h8v3M12 11v7M8.5 14.5h7"/></svg><b>Pharmacy</b><span>Medicines available inside the hospital.</span></div>
+      <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6.5-8 11-8 11z"/></svg><b>Ayushman yojana</b><span>Cashless treatment for eligible families.</span></div>
+    </div>
+    <div class="gallery">
+      <figure class="g1"><img src="assets/img/nicu.webp" alt="Newborn being cared for under a warmer in the NICU" loading="lazy" width="720" height="900"><figcaption>NICU</figcaption></figure>
+      <figure class="g2"><img src="assets/img/room.webp" alt="Private room with hospital bed" loading="lazy" width="720" height="900"><figcaption>Private room</figcaption></figure>
+      <figure class="g3"><img src="assets/img/sonography.webp" alt="Sonography machine with gynaecologist" loading="lazy" width="720" height="900"><figcaption>Sonography</figcaption></figure>
+      <figure class="g4"><img src="assets/img/lab.webp" alt="Pathology lab analysers" loading="lazy" width="720" height="900"><figcaption>Lab</figcaption></figure>
+      <figure class="g5"><img src="assets/img/dental.webp" alt="Dental chair in the dental clinic" loading="lazy" width="720" height="900"><figcaption>Dental clinic</figcaption></figure>
+      <figure class="g6"><img src="assets/img/ward.webp" alt="General ward with curtained beds" loading="lazy" width="720" height="900"><figcaption>General ward</figcaption></figure>
+      <figure class="g7"><img src="assets/img/pharmacy.webp" alt="In-house pharmacy counter" loading="lazy" width="720" height="900"><figcaption>Pharmacy</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="section guide" id="videos">
+  <div class="wrap">
+    <div class="vid-head">
+      <div class="section-head" style="margin:0">
+        <h2>Hear it from our doctors</h2>
+        <p class="lede">Short videos from inside the hospital, in Hindi.</p>
+      </div>
+      <div class="track-btns"><button type="button" data-scroll="-1" aria-label="Previous videos"><svg><use href="#i-left"/></svg></button><button type="button" data-scroll="1" aria-label="Next videos"><svg><use href="#i-right"/></svg></button></div>
+    </div>
+    <div class="reel-track" id="reels">
+      <div class="reel"><button class="reel-box" data-video="tour"><img src="assets/video/tour.webp" alt="" loading="lazy"><span class="play"><span><svg><use href="#i-play"/></svg></span>Hospital tour</span></button><p><b>A walk through the hospital</b>Reception, wards, lab and dental clinic.</p></div>
+      <div class="reel"><button class="reel-box" data-video="ortho"><img src="assets/video/ortho.webp" alt="" loading="lazy"><span class="play"><span><svg><use href="#i-play"/></svg></span>Joint pain after 40</span></button><p><b>Dr. Vinod Kumar</b>Keeping bones and joints strong.</p></div>
+      <div class="reel"><button class="reel-box" data-video="nicu"><img src="assets/video/nicu.webp" alt="" loading="lazy"><span class="play"><span><svg><use href="#i-play"/></svg></span>Inside our NICU</span></button><p><b>Dr. Harendra Meena</b>How we care for newborns.</p></div>
+      <div class="reel"><button class="reel-box" data-video="pregnancy-scan"><img src="assets/video/pregnancy-scan.webp" alt="" loading="lazy"><span class="play"><span><svg><use href="#i-play"/></svg></span>Pregnancy scans explained</span></button><p><b>Dr. Divya Gupta</b>Anomaly scan and colour Doppler.</p></div>
+      <div class="reel"><button class="reel-box" data-video="child-hfmd"><img src="assets/video/child-hfmd.webp" alt="" loading="lazy"><span class="play"><span><svg><use href="#i-play"/></svg></span>Hand, foot &amp; mouth disease</span></button><p><b>Dr. Harendra Meena</b>Signs parents should know.</p></div>
+      <div class="reel"><button class="reel-box" data-video="dental"><img src="assets/video/dental.webp" alt="" loading="lazy"><span class="play"><span><svg><use href="#i-play"/></svg></span>Dental care</span></button><p><b>Dental clinic</b>Modern treatment for every smile.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AYUSHMAN + CHECKLIST -->
+<section class="section">
+  <div class="wrap aid">
+    <div class="aid-card aid-ayush">
+      <div class="big">₹0</div>
+      <h2>Treatment under Mukhyamantri Ayushman Arogya Yojana</h2>
+      <p>Eligible families can get cashless treatment here, including many surgeries. Bring your Jan Aadhaar card and our help desk will check your eligibility before treatment starts.</p>
+      <a class="btn" style="background:#fff;color:#0C5F66;margin-top:26px" href="tel:+918107781966"><svg><use href="#i-phone"/></svg>Ask about Ayushman</a>
+    </div>
+    <div class="aid-card aid-check">
+      <h3>Before you come</h3>
+      <p class="lede" style="font-size:1rem">Tick off what you'll bring. It saves time at the counter.</p>
+      <ul class="checklist">
+        <li><label><input type="checkbox" id="c1"><span>Jan Aadhaar or Ayushman card</span></label></li>
+        <li><label><input type="checkbox" id="c2"><span>Aadhaar card of the patient</span></label></li>
+        <li><label><input type="checkbox" id="c3"><span>Old reports, X-rays and prescriptions</span></label></li>
+        <li><label><input type="checkbox" id="c4"><span>List of medicines you take now</span></label></li>
+        <li><label><input type="checkbox" id="c5"><span>Pregnancy file and previous scans (if pregnant)</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><h2>What patients say</h2></div>
+    <div class="reviews">
+      <figure class="review"><blockquote>“Best facilities and best faculty. Dr. Vinod Kumar is the best surgeon in this hospital.”</blockquote><figcaption><b>Mahaveer Prasad Kumawat</b> · Google review</figcaption></figure>
+      <figure class="review"><blockquote>“Staff is very cooperative. Had a nice, satisfied experience.”</blockquote><figcaption><b>Ajay Meena</b> · Google review</figcaption></figure>
+      <figure class="review"><blockquote>“Best facility and facilities in this hospital. I am very happy.”</blockquote><figcaption><b>Sanjay Gujar</b> · Google review</figcaption></figure>
+    </div>
+    <div class="g-line"><span class="stars">★★★★★</span><span>4.3 average from 37 Google reviews</span><a class="btn btn-ghost" style="min-height:44px" href="https://www.google.com/maps/search/?api=1&query=Luv+kush+Hospital+Deoli+Tonk" target="_blank" rel="noopener">Read all reviews</a></div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section guide" id="book">
+  <div class="wrap book-grid">
+    <div>
+      <div class="section-head" style="margin-bottom:0">
+        <h2>Book an appointment</h2>
+        <p class="lede">Fill this in and it opens WhatsApp with your details ready to send. Our front desk will confirm your time.</p>
+      </div>
+      <div class="hours">
+        <div class="hours-row"><span>Right now</span><b data-opd-text>…</b></div>
+        <div class="hours-row"><span>Morning OPD</span><b>10:00 am – 2:00 pm</b></div>
+        <div class="hours-row"><span>Evening OPD</span><b>5:00 pm – 7:00 pm</b></div>
+        <div class="hours-row em"><span>Emergency &amp; NICU</span><b>Open 24 hours</b></div>
+      </div>
+    </div>
+    <form class="book" id="bookForm" novalidate>
+      <div class="field"><label for="f-name">Patient name</label><input id="f-name" name="name" autocomplete="name" required placeholder="Full name"><span class="err">Enter the patient's name.</span></div>
+      <div class="field"><label for="f-phone">Mobile number</label><input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required placeholder="10-digit number"><span class="err">Enter a 10-digit mobile number.</span></div>
+      <div class="field"><label for="f-dept">Specialist</label>
+        <select id="f-dept" name="dept">
+          <option value="ortho">Bones &amp; joints – Dr. Vinod Kumar</option>
+          <option value="gynae">Women &amp; pregnancy – Dr. Divya Gupta</option>
+          <option value="paeds">Children &amp; newborns – Dr. Harendra Meena</option>
+          <option value="dental">Teeth – Dr. Nutan Meena</option>
+          <option value="general">Not sure – help me choose</option>
+        </select></div>
+      <div class="field"><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+      <div class="field full"><label for="f-note">Problem in a few words <span style="font-weight:400;color:var(--ink-2)">(optional)</span></label><textarea id="f-note" name="note" placeholder="For example: knee pain for 2 months"></textarea></div>
+      <button class="btn btn-primary" type="submit"><svg><use href="#i-wa"/></svg>Send on WhatsApp</button>
+      <p class="form-note">For emergencies, don't wait for a reply. Call 81077 81966.</p>
+    </form>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Getting here</h2>
+      <p class="lede">In front of Bharatpur House, Jyoti Colony, Deoli. Patients come to us from across Tonk, Ajmer and Bhilwara districts.</p>
+    </div>
+    <div class="visit">
+      <div class="visit-photo">
+        <img src="assets/img/aerial.webp" alt="Aerial view of Luv Kush Hospital in Deoli" loading="lazy" width="1000" height="1000">
+        <div class="addr">
+          <div><b>Luv Kush Multi Speciality Hospital</b><span>Bharatpur House, Jyoti Colony, Deoli, Tonk 304804</span></div>
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Luv+kush+Hospital+Deoli+Tonk" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Directions</a>
+        </div>
+      </div>
+      <div class="visit-side">
+        <div class="panel">
+          <h3>Route from your town</h3>
+          <p>Opens Google Maps with the road route already set.</p>
+          <div class="towns" id="towns"></div>
+        </div>
+        <div class="panel">
+          <h3>Contact</h3>
+          <div class="contact-list">
+            <a href="tel:+918107781966"><span>Mobile &amp; emergency</span><b>81077 81966</b></a>
+            <a href="tel:+911434294972"><span>Landline</span><b>01434-294972</b></a>
+            <a href="mailto:luvkushhospital2020@gmail.com"><span>Email</span><b>luvkushhospital2020@gmail.com</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><h2>Common questions</h2></div>
+    <div class="faq">
+      <details><summary>What are the OPD timings?</summary><p>Morning OPD runs from 10:00 am to 2:00 pm and evening OPD from 5:00 pm to 7:00 pm. Emergency and NICU are open 24 hours, every day.</p></details>
+      <details><summary>Is treatment free under the Ayushman scheme?</summary><p>Luv Kush Hospital treats patients under the Mukhyamantri Ayushman Arogya Yojana. Eligible families get cashless treatment for covered procedures. Bring your Jan Aadhaar card and our help desk will confirm what is covered.</p></details>
+      <details><summary>Can I come at night in an emergency?</summary><p>Yes. Emergency is open 24 hours. Call 81077 81966 on your way so the team can get ready.</p></details>
+      <details><summary>How do I book an appointment?</summary><p>Use the booking form on this page to send your details on WhatsApp, or call 81077 81966. You can also walk in during OPD hours.</p></details>
+      <details><summary>Is sonography done at the hospital?</summary><p>Yes. Pregnancy scans, TVS and colour Doppler sonography are done in-house.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <img class="foot-logo" src="assets/img/logo.webp" alt="Luv Kush Hospital logo" width="72" height="72" loading="lazy">
+      <b>Luv Kush Multi Speciality Hospital</b>
+      <p>In front of Bharatpur House, Jyoti Colony, Deoli, Tonk, Rajasthan 304804</p>
+    </div>
+    <div>
+      <b>Visit</b>
+      <a href="#doctors">Specialists</a><a href="#facilities">Facilities</a><a href="#book">Book appointment</a><a href="#visit">Directions</a>
+    </div>
+    <div>
+      <b>Follow</b>
+      <a href="https://www.instagram.com/luvkush_hospital/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=100063680605515" target="_blank" rel="noopener">Facebook</a>
+      <a href="tel:+918107781966">81077 81966</a>
+    </div>
+    <div class="credit"><span>© <span id="yr">2026</span> Luv Kush Hospital, Deoli</span><span>Website by <a href="https://www.instagram.com/graphlay/" target="_blank" rel="noopener">Graphlay</a></span></div>
+  </div>
+</footer>
+
+<div class="actionbar">
+  <a class="btn btn-cross" href="tel:+918107781966"><svg><use href="#i-phone"/></svg>Call</a>
+  <button class="btn btn-ghost" type="button" data-wa><svg><use href="#i-wa"/></svg>WhatsApp</button>
+  <a class="btn btn-primary" href="#book"><svg><use href="#i-cal"/></svg>Book</a>
+</div>
+<button class="fab-wa" type="button" data-wa aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></button>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <h3 id="modalTitle">This is a preview</h3>
+    <p>Online booking and WhatsApp will be switched on in the final website. This demo was designed by Graphlay for Luv Kush Hospital.</p>
+    <a class="btn btn-primary" id="modalAgency" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Talk to Graphlay</a>
+    <div class="em">Medical emergency? Call the hospital directly: <b>81077 81966</b></div>
+    <button class="btn btn-ghost" type="button" id="modalClose">Close</button>
+  </div>
+</div>
+
+<script>
+/* ================= SETTINGS =================
+   Go live: set demo to false and delete the robots "noindex" line in <head>. */
+const CONFIG = {
+  demo: true,
+  demoUntil: "2026-11-09T23:59:59+05:30",   // preview stops working after this
+  agency: { name: "Graphlay", whatsapp: "916378884929", display: "63788 84929" },
+  hospital: { whatsapp: "918107781966" },
+  opd: [ [10*60, 14*60], [17*60, 19*60] ]    // minutes from midnight, IST
+};
+
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+
+/* ---------- Demo protection ---------- */
+const demoActive = CONFIG.demo;
+if (demoActive) {
+  document.documentElement.classList.add("is-demo");
+  const end = new Date(CONFIG.demoUntil);
+  const msLeft = end - new Date();
+  if (msLeft <= 0) {
+    document.body.style.overflow = "hidden";
+    const ex = document.createElement("div");
+    ex.className = "expired";
+    ex.innerHTML = `<div class="box"><img src="assets/img/logo.webp" alt="" width="88" height="88" style="border-radius:50%;background:#fff"><h2>This preview has ended</h2><p>The demo website prepared for Luv Kush Hospital is no longer active. To continue, please contact ${CONFIG.agency.name}.</p><a class="btn btn-cross" href="https://wa.me/${CONFIG.agency.whatsapp}" target="_blank" rel="noopener">WhatsApp ${CONFIG.agency.name} · ${CONFIG.agency.display}</a><p style="font-size:.9rem">Medical emergency? Call Luv Kush Hospital: 81077 81966</p></div>`;
+    document.body.appendChild(ex);
+  }
+  const days = Math.max(1, Math.ceil(msLeft / 864e5));
+  const bar = $("#demoBar");
+  bar.innerHTML = `<div class="wrap"><span><b>Demo website</b> prepared by ${CONFIG.agency.name} for Luv Kush Hospital</span><span>Preview active for ${days} more day${days>1?"s":""}</span><a href="https://wa.me/${CONFIG.agency.whatsapp}" target="_blank" rel="noopener">${CONFIG.agency.display}</a></div>`;
+  bar.hidden = false;
+  const wm = document.createElement("div"); wm.className = "watermark"; wm.setAttribute("aria-hidden","true");
+  document.body.appendChild(wm);
+  $("#modalAgency").href = `https://wa.me/${CONFIG.agency.whatsapp}?text=${encodeURIComponent("Hi Graphlay, Luv Kush Hospital website ke baare mein baat karni hai.")}`;
+}
+const modal = $("#modal");
+function showDemoModal(){ modal.hidden = false; $("#modalClose").focus(); }
+$("#modalClose").addEventListener("click", () => modal.hidden = true);
+modal.addEventListener("click", e => { if (e.target === modal) modal.hidden = true; });
+document.addEventListener("keydown", e => { if (e.key === "Escape") modal.hidden = true; });
+
+function openWhatsApp(text){
+  if (demoActive) return showDemoModal();
+  window.open(`https://wa.me/${CONFIG.hospital.whatsapp}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+}
+$$("[data-wa]").forEach(b => b.addEventListener("click", () => openWhatsApp("Hello Luv Kush Hospital, I would like to ask about an appointment.")));
+
+/* ---------- Header ---------- */
+const header = $(".header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 8), {passive:true});
+$("#yr").textContent = new Date().getFullYear();
+
+/* ---------- Live OPD status (always IST) ---------- */
+function istMinutes(){
+  const p = new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Kolkata",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+  return (+p.find(x=>x.type==="hour").value)*60 + (+p.find(x=>x.type==="minute").value);
+}
+const fmt = m => { const h=Math.floor(m/60), mm=m%60, ap=h>=12?"pm":"am", h12=((h+11)%12)+1; return mm?`${h12}:${String(mm).padStart(2,"0")} ${ap}`:`${h12} ${ap}`; };
+function updateOPD(){
+  const now = istMinutes(); let text, open=false;
+  const cur = CONFIG.opd.find(([a,b]) => now>=a && now<b);
+  if (cur){ open=true; text = `OPD open now · until ${fmt(cur[1])}`; }
+  else {
+    const next = CONFIG.opd.find(([a]) => now < a);
+    text = next ? `OPD opens at ${fmt(next[0])} · Emergency open` : `OPD opens tomorrow ${fmt(CONFIG.opd[0][0])} · Emergency open`;
+  }
+  $$("[data-opd-text]").forEach(el => el.textContent = text);
+  $$("[data-opd-dot]").forEach(el => el.classList.toggle("open", open));
+}
+updateOPD(); setInterval(updateOPD, 60000);
+
+/* ---------- Symptom router ---------- */
+const DOCS = {
+  ortho:{name:"Dr. Vinod Kumar",dept:"Orthopaedics",quals:"MBBS, DNB (Ortho), FIJR (Mumbai)",img:"assets/img/dr-vinod.webp"},
+  gynae:{name:"Dr. Divya Gupta",dept:"Obstetrics & gynaecology",quals:"MBBS, MS (Obs & Gynae)",img:"assets/img/dr-divya.webp"},
+  paeds:{name:"Dr. Harendra Meena",dept:"Paediatrics & NICU",quals:"MBBS, MD (Paediatrics)",img:"assets/img/dr-harendra.webp"},
+  dental:{name:"Dr. Nutan Meena",dept:"Dental care",quals:"BDS, Dental Surgeon",img:"assets/img/dr-nutan.webp"}
+};
+const AREAS = {
+  teeth:{doc:"dental",title:"Teeth and mouth",list:["Toothache or sensitivity","Bleeding or swollen gums","Root canal, caps, crooked teeth"]},
+  shoulder:{doc:"ortho",title:"Shoulder",list:["Frozen or stiff shoulder","Rotator cuff tear","Dislocation after a fall"]},
+  arm:{doc:"ortho",title:"Arm, wrist or a broken bone",list:["Fracture or suspected break","Wrist or elbow pain","Old fracture that healed bent"]},
+  spine:{doc:"ortho",title:"Back and spine",list:["Lower back pain","Sciatica (pain running down the leg)","Neck pain and stiffness"]},
+  pelvis:{doc:"gynae",title:"Lower abdomen and women's health",list:["Irregular or painful periods","White discharge or pelvic pain","Pregnancy confirmation and scans"]},
+  hip:{doc:"ortho",title:"Hip",list:["Hip pain while walking","Arthritis of the hip","Hip replacement advice"]},
+  knee:{doc:"ortho",title:"Knee",list:["Knee pain or swelling","Ligament (ACL/PCL) injury","Knee replacement advice"]},
+  foot:{doc:"ortho",title:"Ankle and foot",list:["Ankle sprain or fracture","Heel pain","Clubfoot in babies"]},
+  pregnancy:{doc:"gynae",title:"Pregnancy check-up",list:["Regular antenatal check-ups","Anomaly scan and colour Doppler","Delivery planning"]},
+  newborn:{doc:"paeds",title:"Newborn care",list:["Jaundice in a newborn","Low birth weight or early birth","Feeding or breathing concerns"]},
+  child:{doc:"paeds",title:"Child with fever or rash",list:["Fever, cough, loose motions","Hand, foot and mouth disease","Growth and nutrition"]},
+  sports:{doc:"ortho",title:"Sports or ligament injury",list:["ACL, PCL or meniscus tear","Shoulder rotator cuff tear","Keyhole (arthroscopic) repair"]},
+  joints:{doc:"ortho",title:"Joint pain or arthritis",list:["Knee and hip arthritis","Joint pain after 40","Joint replacement surgery"]},
+  emergency:{doc:null}
+};
+const result = $("#result");
+function pick(area){
+  $$("[data-area]").forEach(el => el.setAttribute("aria-pressed", String(el.dataset.area === area)));
+  const a = AREAS[area];
+  if (!a.doc){
+    result.className = "result emergency";
+    result.innerHTML = `<div style="grid-column:1/-1"><span class="dept">Emergency</span><h3>Come straight to the hospital</h3><p class="quals">Our emergency team is on duty 24 hours. Call on the way so we're ready when you arrive.</p><ul><li>Road accidents and serious falls</li><li>Heavy bleeding or a suspected broken bone</li><li>High fever in a newborn, breathing trouble</li></ul><div class="row"><a class="btn btn-cross" href="tel:+918107781966"><svg><use href="#i-phone"/></svg>Call 81077 81966</a><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Luv+kush+Hospital+Deoli+Tonk" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Directions</a></div></div>`;
+    return;
+  }
+  const d = DOCS[a.doc];
+  result.className = "result";
+  result.innerHTML = `<img src="${d.img}" alt="${d.name}"><div><span class="dept">${a.title} → ${d.dept}</span><h3>See ${d.name}</h3><span class="quals">${d.quals}</span><ul>${a.list.map(x=>`<li>${x}</li>`).join("")}</ul><div class="row"><a class="btn btn-primary" href="#book" data-book="${a.doc}"><svg><use href="#i-cal"/></svg>Book with ${d.name.replace("Dr. ","Dr. ").split(" ").slice(0,2).join(" ")}</a><a class="btn btn-ghost" href="tel:+918107781966"><svg><use href="#i-phone"/></svg>Call</a></div></div>`;
+}
+$$("[data-area]").forEach(el => {
+  el.addEventListener("click", () => pick(el.dataset.area));
+  el.addEventListener("keydown", e => { if ((e.key==="Enter"||e.key===" ") && el.tagName!=="BUTTON"){ e.preventDefault(); pick(el.dataset.area); }});
+});
+pick("knee");
+
+/* ---------- Booking ---------- */
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-book]");
+  if (b) { const sel = $("#f-dept"); sel.value = b.dataset.book; setTimeout(() => $("#f-name").focus({preventScroll:true}), 500); }
+});
+const dateInput = $("#f-date");
+const todayIST = new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Kolkata"}).format(new Date());
+dateInput.min = todayIST; dateInput.value = todayIST;
+$("#bookForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, name = f.name.value.trim(), phone = f.phone.value.replace(/\D/g,"").slice(-10);
+  const nameOk = name.length > 1, phoneOk = /^[6-9]\d{9}$/.test(phone);
+  $("#f-name").closest(".field").classList.toggle("invalid", !nameOk);
+  $("#f-phone").closest(".field").classList.toggle("invalid", !phoneOk);
+  if (!nameOk) return $("#f-name").focus();
+  if (!phoneOk) return $("#f-phone").focus();
+  const dept = f.dept.options[f.dept.selectedIndex].text;
+  const date = f.date.value ? new Date(f.date.value+"T00:00").toLocaleDateString("en-IN",{weekday:"short",day:"numeric",month:"short"}) : "Any day";
+  const msg = `Appointment request – Luv Kush Hospital\nName: ${name}\nMobile: ${phone}\nSpecialist: ${dept}\nPreferred date: ${date}` + (f.note.value.trim() ? `\nProblem: ${f.note.value.trim()}` : "");
+  openWhatsApp(msg);
+});
+
+/* ---------- Videos ---------- */
+$$("[data-video]").forEach(btn => btn.addEventListener("click", () => {
+  const v = document.createElement("video");
+  v.src = `assets/video/${btn.dataset.video}.mp4`; v.controls = true; v.playsInline = true; v.autoplay = true;
+  v.poster = `assets/video/${btn.dataset.video}.webp`;
+  const box = document.createElement("div"); box.className = "reel-box"; box.style.cursor = "default"; box.appendChild(v);
+  btn.replaceWith(box);
+  $$("#reels video").forEach(o => { if (o !== v) o.pause(); });
+  v.play().catch(()=>{});
+}));
+$$("[data-scroll]").forEach(b => b.addEventListener("click", () => $("#reels").scrollBy({left: +b.dataset.scroll * 300, behavior:"smooth"})));
+
+/* ---------- Routes from nearby towns ---------- */
+const TOWNS = ["Tonk","Kekri","Malpura","Uniara","Jahazpur","Bundi","Shahpura","Kota","Ajmer","Jaipur"];
+$("#towns").innerHTML = TOWNS.map(t => `<a href="https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(t+", Rajasthan")}&destination=${encodeURIComponent("Luv kush Hospital Deoli Tonk")}&travelmode=driving" target="_blank" rel="noopener">${t}</a>`).join("");
+</script>
+</body>
+</html>
